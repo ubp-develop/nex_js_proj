@@ -1,4 +1,5 @@
-import { prisma } from '@/prisma/prisma-client';
+// import { prisma } from '@/prisma/prisma-client';
+import { prisma } from '@/libs/prisma';
 
 import { Categories } from '@/components/shared/categories';
 import { Container } from '@/components/shared/container';
