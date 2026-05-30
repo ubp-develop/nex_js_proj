@@ -13,7 +13,7 @@ import { SortPopup } from '@/components/shared/sort-popup';
 import { Title } from '@/components/shared/title';
 
 export default async function Home() {
-  console.log('REQUEST:', new Date().toISOString());
+  // console.log('REQUEST:', new Date().toISOString());
 
   const products = await prisma.product.findMany({
     include: {
@@ -21,15 +21,15 @@ export default async function Home() {
     },
   });
 
-  console.log(
-    'PRODUCTS:',
-    products.map((product) => ({
-      id: product.id,
-      name: product.name,
-      active: product.active,
-      pizzas: product.pizzas.length,
-    })),
-  );
+  // console.log(
+  //   'PRODUCTS:',
+  //   products.map((product) => ({
+  //     id: product.id,
+  //     name: product.name,
+  //     active: product.active,
+  //     pizzas: product.pizzas.length,
+  //   })),
+  // );
 
   return (
     <main className="min-h-screen bg-white rounded-3xl">
